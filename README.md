@@ -26,3 +26,13 @@ Default Pins:
 GPS RX: GPIO16
 GPS TX: GPIO17
 PPS: GPIO27
+
+## Please Note
+
+This project is shared as a working prototype/reference build, not as a polished commercial product or actively supported package.
+
+You are welcome to use it, modify it, fork it, improve it, or adapt it for your own GPS/PPS NTP setup. Hardware, GPS modules, antennas, Wi-Fi conditions, and timing behaviour can vary, so some adjustment may be needed for your own build.
+
+Issues and pull requests are welcome if they are useful, but please do not treat this repository as a guaranteed support channel or expect custom fixes for individual setups. This is provided as a project you can build on, not a product with a helpdesk attached.
+
+If you improve the code, timing logic, dashboard, documentation, or hardware layout, contributions are appreciated.
