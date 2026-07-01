@@ -46,3 +46,18 @@ Edit these values before flashing:
 ```cpp
 static const char WIFI_SSID[] = "YOUR_WIFI_SSID";
 static const char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";
+
+
+## Please Note
+
+This project is shared as a working prototype/reference build.
+
+It is **not** a commercial product, not a finished package, and not something I am offering ongoing support for.
+
+You are welcome to use it, fork it, modify it, improve it, or adapt it for your own GPS/PPS NTP setup. That is the point of sharing it.
+
+However, please do not treat this repository as a bug-report-and-I-will-fix-it support channel. Hardware, GPS modules, antennas, Wi-Fi networks, timing behaviour, and ESP32 boards all vary, so your build may need changes.
+
+Issues and pull requests are welcome if they help improve the project, but I cannot guarantee fixes, support, or compatibility with individual setups.
+
+In short: this is a project you can build on, not a product with a helpdesk attached.
