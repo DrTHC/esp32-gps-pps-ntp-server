@@ -192,3 +192,6 @@ In short: this is a project you can build on, not a product with a helpdesk atta
 
 ---
 
+## License
+
+This project is released under the MIT License. See the `LICENSE` file for details.
