@@ -1,38 +1,48 @@
-# ESP32 GPS PPS NTP Server
+# ESP32 GPS/PPS NTP Server
 
-Arduino IDE firmware for an ESP32 GPS/PPS-disciplined NTP server.
+Arduino IDE firmware for an ESP32-based GPS/PPS-disciplined NTP server.
+
+This project uses GPS UTC data and a PPS pulse to maintain an internal disciplined timebase, serve NTP on the local network, and provide a web dashboard for monitoring GPS, PPS, NTP, bridge, and system status.
+
+---
 
 ## Features
 
-- GPS UTC parsing with TinyGPSPlus
+- GPS UTC parsing using TinyGPSPlus
 - PPS input discipline
-- UDP NTP server on port 123
-- Web dashboard and `/status`
-- ArduinoOTA
+- UDP NTP server on port `123`
+- Web dashboard
+- `/status` JSON endpoint
+- ArduinoOTA support
 - DHCP networking
-- GPS TCP bridge on port 5000
+- GPS TCP bridge on port `5000`
 - Read-only bridge mode by default
+- Optional GPS maintenance mode for u-center access
+- Post-maintenance GPS/PPS revalidation
+- Basic holdover behaviour when GPS UTC becomes stale but PPS remains fresh
+
+---
+
+## Hardware Used
+
+This was built around an ESP32 and a GPS module with PPS output.
+
+Default wiring:
+
+| Function | ESP32 GPIO |
+|---|---:|
+| GPS RX | GPIO16 |
+| GPS TX | GPIO17 |
+| GPS PPS | GPIO27 |
+
+> Check your own ESP32 board and GPS module pinout before wiring. Some GPS modules use different voltage levels or pin labels, because apparently standardisation was too much to ask.
+
+---
 
 ## Setup
 
 Edit these values before flashing:
 
-
+```cpp
 static const char WIFI_SSID[] = "YOUR_WIFI_SSID";
 static const char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";
-
-Default Pins: 
-
-GPS RX: GPIO16
-GPS TX: GPIO17
-PPS: GPIO27
-
-## Please Note
-
-This project is shared as a working prototype/reference build, not as a polished commercial product or actively supported package.
-
-You are welcome to use it, modify it, fork it, improve it, or adapt it for your own GPS/PPS NTP setup. Hardware, GPS modules, antennas, Wi-Fi conditions, and timing behaviour can vary, so some adjustment may be needed for your own build.
-
-Issues and pull requests are welcome if they are useful, but please do not treat this repository as a guaranteed support channel or expect custom fixes for individual setups. This is provided as a project you can build on, not a product with a helpdesk attached.
-
-If you improve the code, timing logic, dashboard, documentation, or hardware layout, contributions are appreciated.
