@@ -192,26 +192,3 @@ In short: this is a project you can build on, not a product with a helpdesk atta
 
 ---
 
-## Suggested Repository Topics
-
-If you want to make the repo easier to find, add topics such as:
-
-```text
-esp32
-gps
-pps
-ntp
-arduino
-time-server
-tinygpsplus
-gpsdo
-gps-clock
-```
-
----
-
-## License
-
-Add a license before wider sharing.
-
-MIT is a simple choice if you are happy for people to use, modify, and reuse the code with minimal restrictions.
