@@ -20,3 +20,9 @@ Edit these values before flashing:
 
 static const char WIFI_SSID[] = "YOUR_WIFI_SSID";
 static const char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";
+
+Default Pins: 
+
+GPS RX: GPIO16
+GPS TX: GPIO17
+PPS: GPIO27
